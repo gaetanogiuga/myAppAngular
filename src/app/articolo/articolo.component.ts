@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Articolo} from './articolo'
+import {Articolo}  from './articolo';
 @Component({
   selector: 'articolo',
   templateUrl: './articolo.component.html',
@@ -13,5 +13,9 @@ export class ArticoloComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  incrementaApprezzamenti(){
+	  console.log(this.articolo.numApprezzamenti);
+	  this.articolo.numApprezzamenti =  this.articolo.numApprezzamenti+1;
+  }
 }
