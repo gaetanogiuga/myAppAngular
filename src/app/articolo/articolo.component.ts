@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Articolo} from './articolo'
 @Component({
   selector: 'articolo',
@@ -7,15 +7,9 @@ import {Articolo} from './articolo'
 })
 export class ArticoloComponent implements OnInit {
   
-  articolo : Articolo;
+  @Input() articolo : Articolo;
   
-  constructor() { 
-	this.articolo = {
-		titolo : "Creare Componenti Angular 2",
-		autore : "Mario Rossi",
-		descrizione : "Creare componenti con Angular 2 è molto semplice."
-	};
-  }
+  constructor() {}
 
   ngOnInit() {
   }
