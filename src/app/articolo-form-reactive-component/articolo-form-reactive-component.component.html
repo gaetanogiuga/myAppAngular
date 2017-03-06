@@ -1,0 +1,20 @@
+<form [formGroup]="myForm"> 
+  <div> 
+    <label for="txtTitolo">Titolo</label>   
+    <input type="text" id="txtTitolo" formControlName="txtTitolo"> 
+  </div> 
+ 
+ 
+  <div> 
+    <label for="txtAutore">Autore</label>   
+    <input type="text" id="txtAutore" formControlName="txtAutore"> 
+  </div> 
+     
+  <div> 
+    <label for="txtTesto">Testo</label>   
+    <textarea id="txtTesto" formControlName="txtTesto"></textarea> 
+	<strong><span [hidden]="myForm.controls.txtTesto.valid || myForm.controls.txtTesto.pristine">Il testo è obbligatorio</span></strong>
+  </div> 
+     
+  <button type="button" (click)="visualizzaArticolo()">Invia</button> 
+</form> 

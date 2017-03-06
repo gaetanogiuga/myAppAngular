@@ -1,0 +1,26 @@
+<form #myForm ="ngForm">
+	<div>
+		<label for="txtTitolo">Titolo</label>
+		<input type="text" id="txtTitolo" name="titolo"
+			required [(ngModel)]="model.titolo"  	
+		/>
+		<strong>#myTitolo="ngModel"</strong>
+		<strong><span [hidden]="myTitolo.valid || myTitolo.pristine">Il titolo é obbligatorio!</span></strong> 
+	</div>
+	<div>
+		<label for="txtAutore">Autore</label>
+		<input type="text" id="txtAutore" name="autore"
+		required [(ngModel)]="model.autore"/>
+		<strong>#myAutore="ngModel"</strong>
+		<strong><span [hidden]="myAutore.valid || myAutore.pristine">L'autore é obbligatorio!</span></strong>
+	</div>
+	<div>
+		<label for="txtTesto">Testo</label>
+		<textarea id="txtTesto" name="testo" 
+			required [(ngModel)]="model.testo"
+		></textarea>
+		<strong>#myTesto="ngModel"</strong>
+		<strong><span [hidden]="myTesto.valid || Testo.pristine">L'autore é obbligatorio!</span></strong>	
+	</div>
+	<button type="button" [disabled]="!myForm.valid" (click)="inviaArticolo()">Invia</button>
+</form>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ArticoloComponent } from './../app/articolo/articolo.component';
-
+import { ArticoloFormReactiveComponentComponent } from './../app/articolo-form-reactive-component.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,4 +23,9 @@ export class AppComponent {
   mostraMessaggioRingraziamento(event) { 
 		alert("Numero di Like : "+event.numApprezzamenti); 
   }
+   
+  
+  // addArticolo(articolo) { 
+    // this.elencoArticoli.push(articolo)      
+// } 
 }
